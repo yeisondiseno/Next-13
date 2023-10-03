@@ -1,0 +1,69 @@
+@import '@styles/settings/colors.scss';
+
+.m-modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  z-index: 2;
+
+  &.open {
+    display: flex;
+  }
+
+  &--overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba($text, 0.5);
+    opacity: 0;
+
+    animation-name: show-overlay;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &--container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    min-height: fit-content;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 2rem 1rem 1rem 1rem;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+
+    animation-name: show-content;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    &--close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background-color: transparent;
+      border: transparent;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes show-overlay {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-content {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

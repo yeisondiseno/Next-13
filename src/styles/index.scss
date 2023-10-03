@@ -1,0 +1,16 @@
+// settings
+@import './generic/normalize';
+@import './settings/colors';
+// globals
+@import './global/structure.scss';
+@import './global/fonts.scss';
+
+body {
+  background-color: $background;
+  font-family: 'Manrope', sans-serif;
+}
+
+// reset 'a' default text style
+a {
+  text-decoration: none;
+}

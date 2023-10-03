@@ -1,0 +1,27 @@
+@import '@styles/settings/colors.scss';
+@import '@styles/settings/mixins.scss';
+
+.m-card {
+  @include set_shadow_soft($shadow-color);
+  background-color: $white;
+  border: solid 1px transparent;
+  transition: 0.3s;
+
+  &--img {
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  &--content {
+    padding: 0.5rem 1rem;
+  }
+
+  &--footer {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  &:hover {
+    border: solid 1px $primary;
+  }
+}

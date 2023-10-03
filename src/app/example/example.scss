@@ -1,0 +1,32 @@
+@import '@styles/settings/mixins';
+@import '@styles/settings/colors';
+@import '@styles/settings/breakpoints';
+
+.p-example--cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .card-skeleton {
+    background-color: $white;
+    &--body {
+      padding: 8px 16px;
+    }
+  }
+
+  .m-card,
+  .card-skeleton {
+    flex-basis: calc(33% - 20px);
+    flex-grow: 1;
+
+    @include from_x($x-large) {
+      flex-basis: calc(50% - 20px);
+    }
+
+    @include from_x($medium) {
+      flex-basis: 100%;
+    }
+  }
+}

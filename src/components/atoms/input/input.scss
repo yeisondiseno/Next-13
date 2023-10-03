@@ -1,0 +1,117 @@
+@import '@styles/settings/_colors.scss';
+
+$font-input: 1rem;
+
+.a-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 1.5rem;
+
+  &--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.checkbox {
+    .a-input--container {
+      flex-direction: row-reverse;
+      gap: 0.5rem;
+      width: fit-content;
+    }
+  }
+
+  label {
+    font-size: $font-input;
+    margin-bottom: $font-input / 2;
+    color: $primary;
+  }
+
+  input {
+    font-size: $font-input;
+    background-color: $white;
+    border: none;
+    border-bottom: solid 1px $primary;
+    padding: $font-input / 2;
+    color: $input-text;
+
+    &[type='date'] {
+      &::-webkit-calendar-picker-indicator {
+        color: transparent;
+        background: none;
+        z-index: 1;
+      }
+
+      &::before {
+        color: transparent;
+        background: none;
+        display: block;
+        content: '';
+      }
+    }
+
+    &[type='checkbox'] {
+      display: grid;
+      place-content: center;
+      /* Add if not using autoprefixer */
+      -webkit-appearance: none;
+      appearance: none;
+      /* For iOS < 15 to remove gradient background */
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      font: inherit;
+      color: $primary;
+      width: 1.25rem;
+      height: 1.25rem;
+      right: 1rem;
+      border: solid 1px $primary;
+      border-radius: 3px;
+      transform: translateY(-0.075em);
+
+      &:checked::before {
+        transform: scale(1);
+      }
+
+      &::before {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        transform: scale(0);
+        border-radius: 2px;
+        transition: 0.1s transform ease-in-out;
+        box-shadow: inset 1rem 1rem $primary;
+      }
+    }
+
+    &:focus-visible {
+      color: $text;
+      outline: none;
+      border-bottom: solid 1px $secondary;
+    }
+  }
+
+  &.error input {
+    border-bottom: solid 1px $error;
+  }
+
+  &--error {
+    color: $error;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  &--date {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    padding: 0;
+    color: $primary;
+    bottom: calc(1rem - 14px);
+    right: 1rem;
+    pointer-events: none;
+  }
+}

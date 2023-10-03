@@ -1,0 +1,65 @@
+@import '@styles/settings/colors.scss';
+
+$font-input: 1rem;
+
+.a-select {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 1.5rem;
+
+  label {
+    font-size: $font-input;
+    margin-bottom: $font-input / 2;
+    color: $primary;
+  }
+
+  select {
+    width: 100%;
+    font-size: $font-input;
+    background-color: $white;
+    border: none;
+    border-bottom: solid 1px $primary;
+    padding: $font-input / 2;
+    padding-right: $font-input * 3;
+    color: $input-text;
+
+    appearance: none;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+
+    &:focus-visible {
+      color: $text;
+      outline: none;
+      border-bottom: solid 1px $secondary;
+    }
+  }
+
+  &--container {
+    position: relative;
+  }
+
+  &.error select {
+    border-bottom: solid 1px $error;
+  }
+
+  &--error {
+    color: $error;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  &--chevron {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    padding: 0;
+    color: $primary;
+    bottom: calc(1rem - 14px);
+    right: 1rem;
+    pointer-events: none;
+  }
+}

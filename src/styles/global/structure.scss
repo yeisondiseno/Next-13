@@ -1,0 +1,18 @@
+@import '../settings/var-queries';
+@import '../settings/colors';
+
+.container {
+  max-width: $max-width;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+hr {
+  border-top: solid 1px $border;
+  margin: 30px auto;
+  width: 60%;
+
+  &.full-w {
+    width: 100%;
+  }
+}

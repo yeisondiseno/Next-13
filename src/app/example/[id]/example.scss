@@ -1,0 +1,7 @@
+.p-character {
+  &--body {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}

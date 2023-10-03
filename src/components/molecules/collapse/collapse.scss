@@ -1,0 +1,29 @@
+@import '@styles/settings/colors.scss';
+
+.m-collapse {
+  &--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: $text;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1.5rem;
+    border-bottom: solid 1px $border;
+    cursor: pointer;
+  }
+
+  &--content {
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease-out;
+
+    &.open {
+      opacity: 1;
+    }
+  }
+}

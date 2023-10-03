@@ -1,0 +1,27 @@
+// layout
+@mixin mode_flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// shadows
+@mixin set_shadow($color) {
+  box-shadow:
+    0px 32px 64px rgba($color, 0.2),
+    0px 16px 32px rgba($color, 0.05);
+}
+
+@mixin set_shadow_soft($color) {
+  box-shadow:
+    0px 10px 15px rgba($color, 0.08),
+    0px 8px 16px rgba($color, 0.05);
+}
+
+// queries
+@mixin from_x($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

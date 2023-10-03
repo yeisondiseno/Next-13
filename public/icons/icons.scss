@@ -1,0 +1,24 @@
+@import '@styles/settings/colors.scss';
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &--content {
+    width: 7rem;
+    height: 7rem;
+    text-align: center;
+
+    p {
+      overflow-wrap: break-word;
+    }
+  }
+
+  &--content--icon {
+    color: $text;
+    font-size: 2rem;
+  }
+}

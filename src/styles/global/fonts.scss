@@ -1,0 +1,52 @@
+@import '../settings/colors';
+
+h1 {
+  color: $text;
+  font-size: 32px;
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+h2 {
+  color: $text;
+  font-size: 24px;
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+h3 {
+  color: $text;
+  font-size: 20px;
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 600;
+    font-size: 36px;
+  }
+}
+
+h4 {
+  color: $text;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  color: $text;
+  font-weight: 400;
+  font-size: 1rem;
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.small {
+    font-size: 14px;
+  }
+}
