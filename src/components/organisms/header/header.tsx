@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 // components
 import { NavBar } from '@/components/';
-import LogInOutButton from '@/modules/auth/components/logInOutButton/logInOutButton';
 // assets
 import Logo from '@assets/img/logo.svg';
 // styles
@@ -17,8 +16,6 @@ export const Header = () => {
       </Link>
 
       <NavBar />
-
-      <LogInOutButton />
     </header>
   );
 };

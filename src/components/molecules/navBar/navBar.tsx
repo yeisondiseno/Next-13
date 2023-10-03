@@ -2,10 +2,6 @@
 // Next
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// Auth
-import { useSession } from 'next-auth/react';
-// components
-import { Skeleton } from '@/components/';
 // style
 import './navBar.scss';
 
@@ -18,10 +14,6 @@ export const NavBar = () => {
       name: 'Home',
     },
     {
-      path: '/ui-kit',
-      name: 'UIKit',
-    },
-    {
       path: '/example',
       name: 'Characters',
     },
@@ -29,32 +21,7 @@ export const NavBar = () => {
       path: '/example-form',
       name: 'Forms',
     },
-    {
-      path: '/cyber-security',
-      name: 'Security',
-    },
   ];
-
-  // Auth
-  const { data: session, status } = useSession();
-
-  if (status === 'loading')
-    return (
-      <ul className='m-nav-bar'>
-        {ROUTE_LIST.map(({ name }) => (
-          <li key={name}>
-            <Skeleton width={80} height={30} />
-          </li>
-        ))}
-      </ul>
-    );
-
-  if (status === 'authenticated' && session) {
-    ROUTE_LIST.push({
-      path: '/admin',
-      name: 'Admin',
-    });
-  }
 
   return (
     <ul className='m-nav-bar'>

@@ -5,7 +5,6 @@ const HomePage = () => {
   return (
     <main className='p-home-page container'>
       <h1>Home Page</h1>
-      <h2>{name}</h2>
 
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet earum
