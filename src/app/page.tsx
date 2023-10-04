@@ -1,3 +1,5 @@
+// components
+import ModalExample from '@/modules/uiKit/components/modalExample/modalExample';
 // styles
 import './homePage.scss';
 
@@ -19,6 +21,8 @@ const HomePage = () => {
         voluptatibus nisi dignissimos saepe? Velit maiores molestias quae quo
         id.
       </p>
+
+      <ModalExample />
     </main>
   );
 };
